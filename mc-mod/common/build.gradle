@@ -1,0 +1,12 @@
+// Common module - 纯 Java，无 Minecraft 依赖
+plugins {
+    id 'java'
+}
+
+// 动态 Java 版本支持
+def javaVer = project.hasProperty('java_version') ? project.java_version.toInteger() : 17
+
+java {
+    sourceCompatibility = JavaVersion.toVersion(javaVer)
+    targetCompatibility = JavaVersion.toVersion(javaVer)
+}

@@ -1,0 +1,23 @@
+// Root build.gradle - 多模块项目配置
+plugins {
+    id 'base'
+}
+
+subprojects {
+    apply plugin: 'java'
+    
+    repositories {
+        mavenCentral()
+        maven { url = 'https://maven.fabricmc.net/' }
+    }
+}
+
+// 清理任务
+task cleanAll {
+    dependsOn subprojects.collect { it.tasks.matching { it.name == 'clean' } }
+}
+
+// 构建 Fabric 模块
+task buildAll {
+    dependsOn ':fabric:build'
+}
