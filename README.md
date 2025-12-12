@@ -24,7 +24,6 @@
 - ✅ **多版本** - Fabric 1.14+, Forge 1.12+
 - ✅ **仅客户端** - 无需服务端安装
 - ✅ **事件监听** - 支持血量、受伤、治疗、死亡事件
-- ✅ **智能发送** - 仅在状态变化时发送（每5秒强制同步）
 - ✅ **游戏内配置** - 可在游戏中自定义 UDP 端口
 - ✅ **调试日志** - 控制台输出所有发送的数据
 
@@ -33,6 +32,7 @@
 ### Fabric 版本
 
 1. 安装 [Fabric Loader](https://fabricmc.net/use/installer/)
+2. 安装前置mod[Mod Menu] 模组(https://modrinth.com/mod/modmenu)
 2. 安装 [Fabric API](https://modrinth.com/mod/fabric-api)
 3. 将 `hp_output-fabric-1.1.0.jar` 放入 `.minecraft/mods/`
 
